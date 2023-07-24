@@ -13,8 +13,8 @@ export default function App() {
       <Navbar />
       <HomeBanner />
       <BookCar />
-      <VehicleModel />
       <Quick />
+      <VehicleModel />
       <MiniBanner />
       <Accordion />
       <Footer />

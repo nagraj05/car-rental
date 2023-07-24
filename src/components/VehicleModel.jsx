@@ -8,6 +8,7 @@ import ertiga from "../assets/car-images/ertiga.png";
 import scorpio from "../assets/car-images/Scorpio.png";
 import buggati from "../assets/car-images/buggati.png";
 import renault from "../assets/car-images/renault kwid.png";
+import Loader from "./Loader";
 
 const carsData = [
   {
@@ -118,10 +119,12 @@ const carsData = [
 
 export default function VehicleModel() {
   const [selectedCar, setSelectedCar] = useState(carsData[0]);
+  const [carLoad, setCarLoad] = useState(true);
 
   const handleCarClick = (car) => {
     setSelectedCar(car);
   };
+
 
   return (
     <div>
@@ -152,13 +155,14 @@ export default function VehicleModel() {
             className="flex flex-col justify-center items-center h-auto bg-white"
             style={{ width: "800px", height: "500px" }}
           >
-            {/* <h2 className="text-2xl font-bold mb-4">{selectedCar.model}</h2> */}
-            <img
-              src={selectedCar.image}
-              alt={selectedCar.model}
-              className="mb-4   "
-              style={{ width: "800px", height: "500px" }}
-            />
+            {carLoad && <Loader />}
+              <img
+                src={selectedCar.image}
+                alt={selectedCar.model}
+                className="mb-4"
+                style={{ width: "800px", height: "500px", display: carLoad ? "none" : "flex" }}
+                onLoad={() =>  setCarLoad(false)}
+              />
           </div>
           <div className="flex flex-col">
             <div className="border rounded-lg bg-white w-64 h-auto">
