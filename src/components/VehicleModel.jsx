@@ -6,8 +6,8 @@ import swift from "../assets/car-images/Swift.png";
 import jeep from "../assets/car-images/jeep.png";
 import ertiga from "../assets/car-images/ertiga.png";
 import scorpio from "../assets/car-images/Scorpio.png";
-import buggati from '../assets/car-images/buggati.png'
-import renault from '../assets/car-images/renault kwid.png'
+import buggati from "../assets/car-images/buggati.png";
+import renault from "../assets/car-images/renault kwid.png";
 
 const carsData = [
   {
@@ -32,7 +32,7 @@ const carsData = [
     mark: "X",
     year: "2021",
     AC: "Yes",
-    fuelType: "Petrol",
+    fuelType: "Diesel",
     seater: "5",
     transmission: "Manual",
   },
@@ -54,7 +54,7 @@ const carsData = [
     name: "Jeep",
     image: jeep,
     pricePerDay: "₹12,000",
-    model: "XUV",
+    model: "Jeep",
     mark: "X",
     year: "2021",
     AC: "Yes",
@@ -67,7 +67,7 @@ const carsData = [
     name: "Maruti Swift Dzire",
     image: swift,
     pricePerDay: "₹7000",
-    model: "XUV",
+    model: "Dzire",
     mark: "X",
     year: "2020",
     AC: "Yes",
@@ -84,7 +84,7 @@ const carsData = [
     mark: "X",
     year: "2023",
     AC: "Yes",
-    fuelType: "Petrol",
+    fuelType: "Diesel",
     seater: "5",
     transmission: "Manual",
   },
@@ -93,12 +93,12 @@ const carsData = [
     name: "Maruti Suzuki Ertiga",
     image: ertiga,
     pricePerDay: "₹10,000",
-    model: "XUV",
+    model: "Ertiga",
     mark: "X",
     year: "2019",
     AC: "Yes",
     fuelType: "Petrol",
-    seater: "5",
+    seater: "7",
     transmission: "Manual",
   },
   {
@@ -106,12 +106,12 @@ const carsData = [
     name: "Buggati",
     image: buggati,
     pricePerDay: "haha lol",
-    model: "XUV",
+    model: "Convertible",
     mark: "X",
-    year: "2019",
+    year: "2023",
     AC: "Yes",
-    fuelType: "Petrol",
-    seater: "5",
+    fuelType: "Hybrid",
+    seater: "2",
     transmission: "Manual",
   },
 ];
@@ -126,7 +126,6 @@ export default function VehicleModel() {
   return (
     <div>
       <div className="flex justify-center flex-col items-center py-4">
-        <h3 className="text-xl font-rob">Vehicle Models</h3>
         <h2 className="text-5xl font-rob">Our rental fleet</h2>
         <p className="text-lg font-rob">
           Choose from a variety of our amazing vehicles to rent for your next
@@ -151,14 +150,14 @@ export default function VehicleModel() {
         <div className="flex space-x-6 ">
           <div
             className="flex flex-col justify-center items-center h-auto bg-white"
-            style={{ width: "800px", height: "400px" }}
+            style={{ width: "800px", height: "500px" }}
           >
             {/* <h2 className="text-2xl font-bold mb-4">{selectedCar.model}</h2> */}
             <img
               src={selectedCar.image}
               alt={selectedCar.model}
               className="mb-4   "
-              style={{ width: "800px", height: "400px" }}
+              style={{ width: "800px", height: "500px" }}
             />
           </div>
           <div className="flex flex-col">
@@ -166,9 +165,9 @@ export default function VehicleModel() {
               <div className="space-y-2">
                 <div className="bg-red-600 text-white text-center rounded-t-lg px-4 py-2">
                   <span className="text-xl">{selectedCar.pricePerDay}</span>
-                  <strong className="text-lg"> /  per day</strong>
+                  <strong className="text-lg"> / per day</strong>
                 </div>
-                <div >
+                <div>
                   <table className="w-full table-auto">
                     <tbody>
                       <tr className="border-b-2">
@@ -178,12 +177,6 @@ export default function VehicleModel() {
                         <td className="py-2  text-center">
                           {selectedCar.model}
                         </td>
-                      </tr>
-                      <tr className="border-b-2">
-                        <td className="px-4 text-left">
-                          <strong>Mark:</strong>
-                        </td>
-                        <td className="py-2  text-center">{selectedCar.mark}</td>
                       </tr>
                       <tr className="border-b-2">
                         <td className="px-4 text-left">

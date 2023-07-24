@@ -3,7 +3,7 @@ import mail from "../assets/icons/email.png";
 
 export default function Footer() {
   return (
-    <div className="bg-gray-100 py-16 px-8 flex flex-wrap justify-between">
+    <div className="bg-gray-100 py-16 px-8 flex flex-wrap justify-between mt-5">
       <div className="space-y-4">
         <h3 className="text-2xl font-bold font-poppins">Rayagada Rentals</h3>
         <p className="text-gray-600 w-80">

@@ -1,6 +1,6 @@
-import service from '../assets/icons/protection.png';
-import operator from '../assets/icons/help-operator.png';
-import car from '../assets/icons/image.png';
+import service from '../assets/icons/protection red.png';
+import operator from '../assets/icons/help-operator red.png';
+import car from '../assets/icons/image red.png';
 
 const Data = [
   {
@@ -32,8 +32,8 @@ export default function Quick() {
         {Data.map((item) => (
           <div key={item.id} className="p-6">
             <img src={item.img} alt="" className="h-20 w-20 mx-auto mb-4" />
-            <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-            <p className="text-gray-600">{item.para}</p>
+            <h3 className="text-xl font-bold mb-2 font-poppins">{item.title}</h3>
+            <p className="text-gray-600 font-poppins font-extralight">{item.para}</p>
           </div>
         ))}
       </div>
