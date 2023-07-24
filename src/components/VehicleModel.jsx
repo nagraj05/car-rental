@@ -1,6 +1,5 @@
 import { useState } from "react";
 import corolla from "../assets/car-images/corolla.png";
-import civic from "../assets/car-images/honda civic.jpg";
 import xuv300 from "../assets/car-images/xuv300.webp";
 import swift from "../assets/car-images/Swift.png";
 // import altis from '../assets/car-images/altis.jpg'
@@ -8,6 +7,7 @@ import jeep from "../assets/car-images/jeep.png";
 import ertiga from "../assets/car-images/ertiga.png";
 import scorpio from "../assets/car-images/Scorpio.png";
 import buggati from '../assets/car-images/buggati.png'
+import renault from '../assets/car-images/renault kwid.png'
 
 const carsData = [
   {
@@ -25,15 +25,15 @@ const carsData = [
   },
   {
     id: 2,
-    name: "Honda Civic",
-    image: civic,
+    name: "Renault KWID",
+    image: renault,
     pricePerDay: "₹8000",
-    model: "Civic",
+    model: "KWID",
     mark: "X",
     year: "2021",
     AC: "Yes",
     fuelType: "Petrol",
-    seater: "7",
+    seater: "5",
     transmission: "Manual",
   },
   {
@@ -139,7 +139,7 @@ export default function VehicleModel() {
             <div
               key={car.id}
               onClick={() => handleCarClick(car)}
-              className={`cursor-pointer border font-rob font-bold rounded-lg p-2 hover:bg-red-600 ${
+              className={`cursor-pointer border font-rob font-bold rounded-lg p-2 hover:bg-red-600 transition-all duration-200 ${
                 selectedCar.id === car.id ? "bg-red-600 text-white" : ""
               }`}
             >
