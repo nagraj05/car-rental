@@ -2,13 +2,11 @@ import { useState } from "react";
 import corolla from "../assets/car-images/corolla.png";
 import xuv300 from "../assets/car-images/xuv300.webp";
 import swift from "../assets/car-images/Swift.png";
-// import altis from '../assets/car-images/altis.jpg'
 import jeep from "../assets/car-images/jeep.png";
 import ertiga from "../assets/car-images/ertiga.png";
 import scorpio from "../assets/car-images/Scorpio.png";
 import buggati from "../assets/car-images/buggati.png";
 import renault from "../assets/car-images/renault kwid.png";
-import Loader from "./Loader";
 
 const carsData = [
   {
@@ -119,7 +117,6 @@ const carsData = [
 
 export default function VehicleModel() {
   const [selectedCar, setSelectedCar] = useState(carsData[0]);
-  const [carLoad, setCarLoad] = useState(true);
 
   const handleCarClick = (car) => {
     setSelectedCar(car);
@@ -155,13 +152,11 @@ export default function VehicleModel() {
             className="flex flex-col justify-center items-center h-auto bg-white"
             style={{ width: "800px", height: "500px" }}
           >
-            {carLoad && <Loader />}
               <img
                 src={selectedCar.image}
                 alt={selectedCar.model}
                 className="mb-4"
-                style={{ width: "800px", height: "500px", display: carLoad ? "none" : "flex" }}
-                onLoad={() =>  setCarLoad(false)}
+                style={{ width: "800px", height: "500px"}}
               />
           </div>
           <div className="flex flex-col">
