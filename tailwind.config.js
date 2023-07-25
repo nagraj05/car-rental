@@ -9,7 +9,10 @@ export default {
         slint: ["Stint Ultra Expanded", "cursive"],
         poppins: ["Poppins", "sans-serif"],
       },
+      scrollbar: ['rounded', 'dark'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 };
