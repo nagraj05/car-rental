@@ -68,7 +68,7 @@ const Accordion = () => {
       <h2 className=" text-5xl font-rob font-bold mb-5">
         Frequently Asked Questions
       </h2>
-      <p className="text-gray-400 mb-5 text-lg text-center">
+      <p className="text-gray-400 mb-5 w-2/5 text-lg text-center">
         Frequently Asked Questions About the Car Rental Booking Process on Our
         Website: Answers to Common Concerns and Inquiries.
       </p>
