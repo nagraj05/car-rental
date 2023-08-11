@@ -13,7 +13,10 @@ const AccordionItem = ({ question, answer, isOpen, toggleAccordion }) => {
         <span className={isOpen ? "transform rotate-180" : ""}>▼</span>
       </button>
       {isOpen && (
-        <div className="p-4 bg-gray-100 font-poppins" style={{ width: "700px" }}>
+        <div
+          className="p-4 bg-gray-100 font-poppins"
+          style={{ width: "700px" }}
+        >
           <p className="text-gray-800">{answer}</p>
         </div>
       )}
@@ -36,35 +39,37 @@ const Accordion = () => {
     },
     {
       question: "What is the minimum age to rent a car?",
+      answer: "The minimum age is between 21 and 25 years old.",
+    },
+    {
+      question: "Is insurance included in the rental price?",
       answer:
-        "The minimum age is between 21 and 25 years old.",
+        "We do not include insurance. You can either purchase insurance from the rental company or check if your personal auto insurance or credit card offers coverage for rental cars.",
     },
     {
-        question:"Is insurance included in the rental price?",
-        answer:"We do not include insurance. You can either purchase insurance from the rental company or check if your personal auto insurance or credit card offers coverage for rental cars."
+      question: "What if I need to cancel or modify my reservation?",
+      answer: "We offer free cancellation within 3hrs before the pickup time.",
     },
     {
-        question:"What if I need to cancel or modify my reservation?",
-        answer:"We offer free cancellation within 3hrs before the pickup time."
+      question:
+        "Can I rent a car one way and drop it off at a different location?",
+      answer:
+        "Yes, we offer one-way rentals, allowing you to pick up a car at one location and return it to another. However, one-way fees may apply, and availability may vary.",
     },
     {
-        question:"Can I rent a car one way and drop it off at a different location?",
-        answer:"Yes, we offer one-way rentals, allowing you to pick up a car at one location and return it to another. However, one-way fees may apply, and availability may vary."
+      question: "Can I add a GPS or child car seat to my rental?",
+      answer:
+        "All our cars are GPS enabled. You can use addons for child car seat.",
     },
     {
-        question:"Can I add a GPS or child car seat to my rental?",
-        answer:"All our cars are GPS enabled. You can use addons for child car seat."
+      question: "What do I do in case of an accident or breakdown?",
+      answer:
+        "In case of an accident, contact the local authorities and the rental car company immediately.",
     },
-    {
-        question:"What do I do in case of an accident or breakdown?",
-        answer:"In case of an accident, contact the local authorities and the rental car company immediately."
-    }
   ];
 
   return (
-    <div
-      className=" mx-auto flex mt-4 flex-col items-center"
-    >
+    <div className=" mx-auto flex mt-4 flex-col items-center mb-5">
       <h2 className=" text-5xl font-rob font-bold mb-5">
         Frequently Asked Questions
       </h2>

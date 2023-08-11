@@ -7,7 +7,6 @@ export default function VehicleModel() {
     setSelectedCar(car);
   };
 
-
   return (
     <div>
       <div className="flex justify-center flex-col items-center py-4">
@@ -37,18 +36,18 @@ export default function VehicleModel() {
             className="flex flex-col justify-center items-center h-auto bg-white"
             style={{ width: "800px", height: "500px" }}
           >
-              <img
-                src={selectedCar.image}
-                alt={selectedCar.model}
-                className="mb-4"
-                style={{ width: "800px", height: "500px"}}
-              />
+            <img
+              src={selectedCar.image}
+              alt={selectedCar.model}
+              className="mb-4"
+              style={{ width: "800px", height: "500px" }}
+            />
           </div>
           <div className="flex flex-col">
             <div className="border rounded-lg bg-white w-64 h-auto">
               <div className="space-y-2">
                 <div className="bg-red-600 text-white text-center rounded-t-lg px-4 py-2">
-                  <span className="text-xl">{selectedCar.pricePerDay}</span>
+                  <span className="text-xl">₹{selectedCar.pricePerDay}</span>
                   <strong className="text-lg"> / per day</strong>
                 </div>
                 <div>

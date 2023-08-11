@@ -1,25 +1,26 @@
-import Navbar from "./components/Navbar"
-import HomeBanner from "./components/HomeBanner"
-import BookCar from "./components/BookCar"
-import VehicleModel from "./components/VehicleModel"
-import MiniBanner from "./components/MiniBanner"
-import Accordion from "./components/Accordian"
-import Quick from "./components/Quick"
-import Footer from "./components/Footer"
-import ScrollButton from "./components/ScrollButton"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Testimonials from "./pages/Testimonials";
+import Team from "./pages/Team";
+import VehicleModel from "./pages/VehicleModels";
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="overflow-hidden">
-      <ScrollButton />
+    <BrowserRouter>
       <Navbar />
-      <HomeBanner />
-      <BookCar />
-      <Quick />
-      <VehicleModel />
-      <MiniBanner />
-      <Accordion />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/vehicleModels" element={<VehicleModel />} />
+        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
-    </div>
-  )
+    </BrowserRouter>
+  );
 }
