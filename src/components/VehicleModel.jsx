@@ -9,14 +9,14 @@ export default function VehicleModel() {
 
   return (
     <div>
-      <div className="flex justify-center flex-col items-center py-4">
+      <div className="flex justify-center flex-col items-center py-4 ">
         <h2 className="text-5xl font-rob">Our rental fleet</h2>
         <p className="text-lg font-rob">
           Choose from a variety of our amazing vehicles to rent for your next
           adventure or business trip
         </p>
       </div>
-      <div className="flex p-4 space-x-6 h-auto">
+      <div className="flex p-4 space-x-6 h-auto justify-center">
         <div className="flex flex-col space-y-2 w-60">
           {carsData.map((car) => (
             <div
