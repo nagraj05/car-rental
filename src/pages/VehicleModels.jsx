@@ -7,7 +7,7 @@ export default function VehicleModels() {
       <h1 className="text-4xl font-rob font-bold text-center">
         Our Car Models
       </h1>
-      <div className="flex flex-wrap justify-left items-center w-4/5 mx-auto">
+      <div className="flex flex-wrap justify-center  w-4/5 mx-auto">
         {carsData.map((car) => (
           <div
             key={car.id}

@@ -52,7 +52,7 @@ export default function Team() {
         <h1 className="text-center font-rob font-bold p-5 text-4xl">
           Our Team
         </h1>
-        <div className="flex flex-wrap w-4/5 mx-auto">
+        <div className="flex flex-wrap w-4/5 mx-auto justify-center">
           {team.map((person) => (
             <div
               key={person.id}
