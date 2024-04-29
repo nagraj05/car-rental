@@ -54,7 +54,7 @@ export default function About() {
                 <div className="flex gap-5">
                   <h1 className="text-6xl font-bold text-red-700">16</h1>
                   <h5 className="text-lg font-bold text-gray-500">
-                    Repair Shopss
+                    Repair Shops
                   </h5>
                 </div>
               </div>
